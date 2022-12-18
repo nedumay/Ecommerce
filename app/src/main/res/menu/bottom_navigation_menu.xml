@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/explorer"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_explor_white"
+        android:title="@string/explorer"/>
+    <item
+        android:id="@+id/shop"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_shopping_bag_white"
+        android:title="@string/shop"
+        />
+    <item
+        android:id="@+id/favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_favorite_border_white"
+        android:title="@string/favorite"/>
+    <item
+        android:id="@+id/account"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_white"
+        android:title="@string/account"/>
+
+</menu>

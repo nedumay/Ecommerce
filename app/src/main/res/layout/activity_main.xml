@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_white">
+
+            <ImageView
+                android:id="@+id/check_map"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/check"
+                app:layout_constraintBottom_toBottomOf="@+id/choice_city"
+                app:layout_constraintEnd_toStartOf="@+id/choice_city"
+                app:layout_constraintTop_toTopOf="@+id/choice_city" />
+
+            <ImageView
+                android:id="@+id/image_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/find"
+                app:layout_constraintBottom_toBottomOf="@+id/choice_city"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/choice_city" />
+
+            <TextView
+                android:id="@+id/text_selector_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="@string/select_category"
+                android:textColor="@color/dark_blue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/choice_city" />
+
+            <TextView
+                android:id="@+id/text_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/view_all"
+                android:textColor="@color/light_red"
+                app:layout_constraintBottom_toBottomOf="@+id/text_selector_category"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_selector_category" />
+
+            <Spinner
+                android:id="@+id/choice_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="119dp"
+                android:layout_marginTop="19dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_selector_category">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/btn_check_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/check_phone"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center_horizontal"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@string/phone"
+                        android:textColor="@color/selector_text" />
+
+                    <CheckBox
+                        android:id="@+id/btn_check_computer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/check_computer"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center_horizontal"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@string/computer"
+                        android:textColor="@color/selector_text" />
+
+                    <CheckBox
+                        android:id="@+id/btn_check_health"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/check_health"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center_horizontal"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@string/health"
+                        android:textColor="@color/selector_text" />
+
+                    <CheckBox
+                        android:id="@+id/btn_check_books"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/check_books"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center_horizontal"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@string/books"
+                        android:textColor="@color/selector_text" />
+
+                    <CheckBox
+                        android:id="@+id/btn_check_other"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/check_other"
+                        android:button="@null"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center_horizontal"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@string/other"
+                        android:textColor="@color/selector_text" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_card"
+                android:layout_width="300dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Search" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/img_btn_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_menu"
+                app:layout_constraintBottom_toBottomOf="@+id/search_card"
+                app:layout_constraintEnd_toEndOf="@+id/text_see_more_1"
+                app:layout_constraintStart_toStartOf="@+id/text_see_more_1"
+                app:layout_constraintTop_toTopOf="@+id/search_card" />
+
+            <TextView
+                android:id="@+id/text_hot_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="@string/hot_sales"
+                android:textColor="@color/dark_blue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_card" />
+
+            <TextView
+                android:id="@+id/text_see_more_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/see_more"
+                android:textColor="@color/light_red"
+                app:layout_constraintBottom_toBottomOf="@+id/text_hot_sales"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_hot_sales" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hot_sales"
+                android:layout_width="match_parent"
+                android:layout_height="182dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_hot_sales"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/hot_sales_item" />
+
+            <TextView
+                android:id="@+id/text_best_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mark_pro_bold"
+                android:text="@string/best_seller"
+                android:textColor="@color/dark_blue"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_hot_sales" />
+
+            <TextView
+                android:id="@+id/text_see_more_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/see_more"
+                android:textColor="@color/light_red"
+                app:layout_constraintBottom_toBottomOf="@+id/text_best_seller"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_best_seller" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_best_seller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="56dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_best_seller"
+                app:layout_constraintVertical_bias="0.0"
+                app:spanCount="2"
+                tools:listitem="@layout/best_seller_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/bottomNavigationStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

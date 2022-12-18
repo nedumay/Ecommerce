@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Splash TextView style -->
+    <style name="app_name_splash">
+        <item name="android:textSize">33sp</item>
+        <item name="android:fontFamily">@font/mark_pro_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Bottom navigation style -->
+    <style name="bottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored"></style>
+</resources>
