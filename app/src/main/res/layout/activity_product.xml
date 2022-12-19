@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back_white"
     tools:context=".ui.product.ProductActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/back_white">
 
 
         <ImageView
@@ -265,27 +259,23 @@
                     app:layout_constraintStart_toStartOf="@+id/tabs_card"
                     app:layout_constraintTop_toBottomOf="@+id/info_phone" />
 
-                <CheckBox
+                <androidx.cardview.widget.CardView
                     android:id="@+id/check_color_1"
                     android:layout_width="39dp"
                     android:layout_height="39dp"
                     android:layout_marginTop="16dp"
-                    android:button="@null"
-                    android:ellipsize="end"
-                    android:background="@drawable/color_shape"
+                    app:cardCornerRadius="50dp"
                     android:elevation="2dp"
                     app:layout_constraintStart_toStartOf="@+id/select_text"
                     app:layout_constraintTop_toBottomOf="@+id/select_text" />
 
-                <CheckBox
+                <androidx.cardview.widget.CardView
                     android:id="@+id/check_color_2"
                     android:layout_width="39dp"
                     android:layout_height="39dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginStart="16dp"
-                    android:button="@null"
-                    android:ellipsize="end"
-                    android:background="@drawable/color_shape"
+                    app:cardCornerRadius="50dp"
                     android:elevation="2dp"
                     app:layout_constraintStart_toEndOf="@+id/check_color_1"
                     app:layout_constraintTop_toBottomOf="@+id/select_text" />
@@ -378,14 +368,6 @@
                 </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </androidx.cardview.widget.CardView>
 
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
