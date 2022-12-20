@@ -148,7 +148,7 @@
                         android:id="@+id/img_cpu"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:src="@drawable/cpu"
+                        android:src="@drawable/ic_cpu"
                         app:layout_constraintEnd_toStartOf="@+id/img_camera"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintHorizontal_chainStyle="spread"
