@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.cart.CartActivity">
 
+
     <ImageView
         android:id="@+id/img_back_btn"
         android:layout_width="wrap_content"
